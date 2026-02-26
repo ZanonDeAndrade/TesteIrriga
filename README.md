@@ -23,7 +23,7 @@ src/
 
 ---
 
-## InstalaÃ§Ã£o
+## Instalação
 
 Clone o projeto e instale as dependências 
 
@@ -33,7 +33,7 @@ npm install
 
 ---
 
-## ConfiguraÃ§Ã£o do ambiente
+## Configuração do ambiente
 
 Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo
 
