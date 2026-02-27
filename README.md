@@ -1,4 +1,12 @@
-﻿## Tecnologias utilizadas
+﻿# API Irriga
+
+API REST desenvolvida em Node.js com Express para controle de usuários, pivôs de irrigação e registros de irrigação.
+
+Projeto criado como parte de um desafio técnico.
+
+---
+
+## Tecnologias utilizadas
 
 - Node.js
 - Express
@@ -6,6 +14,8 @@
 - jsonwebtoken (JWT)
 - uuid
 - dotenv
+- Docker
+- Docker Compose
 
 ---
 
@@ -19,32 +29,57 @@ src/
   routes/
   middlewares/
   data/
+Dockerfile
+docker-compose.yml
 ```
 
 ---
 
-## Instalação
+# Rodando com Docker (Recomendado)
 
-Clone o projeto e instale as dependências 
+Certifique-se de ter o Docker instalado na sua máquina.
+
+Na raiz do projeto, execute:
+
+```bash
+docker compose up --build
+```
+
+A API ficará disponível em:
+
+```
+http://localhost:3001
+```
+
+Para parar a aplicação:
+
+```bash
+docker compose down
+```
+
+---
+
+# Rodando sem Docker (modo local)
+
+Caso queira rodar sem Docker:
+
+## Instalação
 
 ```bash
 npm install
 ```
 
----
-
 ## Configuração do ambiente
 
-Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo
+Crie um arquivo `.env` na raiz do projeto:
 
 ```env
 PORT=3001
 JWT_SECRET=53cdfa6fa0d6e9f7124d65f843279e7ea87a61fbd052dfe4b84a73603d1a04cb440ab1b3bc295fa13947a2294d53b77418509f9872027abecb88ef6508aa83bc
+
 ```
 
----
-
-## Como rodar o projeto
+## Executar
 
 Modo desenvolvimento:
 
@@ -58,7 +93,7 @@ Modo normal:
 npm start
 ```
 
-A API vai estar rodando em:
+A API ficará disponível em:
 
 ```
 http://localhost:3001
@@ -66,9 +101,8 @@ http://localhost:3001
 
 ---
 
-# Endpoints
+# Testando no Postman
 
-## Autenticação
 
 ### Registrar usuário
 
